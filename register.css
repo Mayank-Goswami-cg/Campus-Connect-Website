@@ -1,0 +1,65 @@
+:root {
+  --brown: #783e2c;
+  --gold: #ffc72c;
+  --orange: #dd9347;
+  --muted-brown: #ad7253;
+  --card: #f4f4f4;
+  --ink: #111111;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #ffffff;
+  color: var(--ink);
+  font-family: Inter, Arial, sans-serif;
+}
+.site-header {
+  height: 144px;
+  padding: 0 43px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--brown);
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 75px;
+  height: 94px;
+  flex-shrink: 0;
+
+  color: var(--gold);
+  font-family: Georgia, serif;
+  font-size: 78px;
+  font-weight: 900;
+  line-height: 1;
+  text-decoration: none;
+
+  -webkit-text-stroke: 3px #ffe05d;
+  filter: drop-shadow(5px 5px 0 #9d5f1b);
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 78px;
+}
+
+.main-nav a {
+  color: var(--gold);
+  font-size: 34px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+  color: #ffe57a;
+  text-decoration: underline;
+}
