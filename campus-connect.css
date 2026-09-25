@@ -23,14 +23,12 @@ body {
   font-family: Inter, Arial, sans-serif;
 }
 
-/* Header */
-
 .site-header {
   height: 144px;
   padding: 0 43px;
   display: flex;
   align-items: center;
-  gap: 100px;
+  justify-content: space-between;
   background: var(--brown);
 }
 
@@ -71,8 +69,6 @@ body {
   text-decoration: underline;
 }
 
-/* Main content */
-
 main {
   padding: 62px 59px 78px;
 }
@@ -97,8 +93,6 @@ h1 {
   font-weight: 600;
   line-height: 1.28;
 }
-
-/* Cards */
 
 .feature-grid {
   display: grid;
@@ -161,8 +155,6 @@ h1 {
 .card-button:focus {
   background: #8c4a35;
 }
-
-/* Quote */
 
 .tagline {
   margin: 82px 0 0;

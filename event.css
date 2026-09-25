@@ -1,0 +1,266 @@
+:root {
+  --brown: #733f2d;
+  --gold: #f9ca3a;
+  --purple: #4b13be;
+  --black: #000;
+  --white: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--black);
+  background: var(--white);
+  font-family: "Inter", sans-serif;
+}
+
+.navbar {
+  width: 100%;
+  min-height: 143px;
+  padding: 22px 7.5% 20px 3%;
+  display: flex;
+  align-items: center;
+  gap: 7%;
+  background: var(--brown);
+}
+
+.logo {
+  display: grid;
+  place-items: center;
+  width: 75px;
+  height: 94px;
+  flex-shrink: 0;
+
+  color: var(--gold);
+  font-family: Georgia, serif;
+  font-size: 78px;
+  font-weight: 900;
+  line-height: 1;
+  text-decoration: none;
+
+  -webkit-text-stroke: 3px #ffe05d;
+  filter: drop-shadow(5px 5px 0 #9d5f1b);
+}
+
+.navbar nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.navbar nav a {
+  color: var(--gold);
+  font-size: clamp(18px, 2.6vw, 36px);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.navbar nav a:hover,
+.navbar nav a:focus-visible {
+  color: var(--white);
+}
+
+main {
+  width: min(100%, 1382px);
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 61px 0 48px;
+  color: var(--purple);
+  font-size: clamp(34px, 3.5vw, 48px);
+  text-align: center;
+}
+
+.hero > p {
+  margin: 0 20px 32px;
+  font-family: "Roboto Mono", monospace;
+  font-size: clamp(21px, 2.6vw, 36px);
+  font-weight: 600;
+  text-align: center;
+}
+
+.hero img {
+  width: calc(100% + 58px);
+  height: 394px;
+  margin-left: -29px;
+  display: block;
+  object-fit: cover;
+}
+
+.hero h2 {
+  margin: 32px 0 60px;
+  color: var(--purple);
+  font-size: clamp(30px, 3.5vw, 48px);
+  font-weight: 600;
+  text-align: center;
+}
+
+.events {
+  display: flex;
+  flex-direction: column;
+  gap: 61px;
+}
+
+.event {
+  min-height: 618px;
+}
+
+.event h3 {
+  margin: 0 0 52px;
+  font-size: clamp(31px, 3.5vw, 48px);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.event-layout {
+  display: grid;
+  grid-template-columns: minmax(420px, 579px) minmax(420px, 1fr);
+  gap: 9%;
+  align-items: start;
+  padding: 0 0 0 4.8%;
+}
+
+.event-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.event-media img {
+  width: 100%;
+  height: 373px;
+  display: block;
+  object-fit: cover;
+}
+
+.register {
+  min-width: 361px;
+  min-height: 81px;
+  margin-top: 53px;
+  padding: 16px 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  color: var(--gold);
+  background: var(--brown);
+  font-size: 36px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 160ms ease, filter 160ms ease;
+}
+
+.register:hover,
+.register:focus-visible {
+  filter: brightness(1.12);
+  transform: translateY(-3px);
+}
+
+.event-content {
+  padding-right: 2%;
+  font-size: clamp(21px, 2.3vw, 32px);
+  font-weight: 500;
+  line-height: 1.22;
+}
+
+.event-content p {
+  margin: 0 0 25px;
+}
+
+.event-content .small {
+  font-size: clamp(20px, 2vw, 28px);
+}
+
+.event-content .date {
+  color: var(--purple);
+}
+
+.event-content address {
+  margin: 0;
+  font-style: normal;
+}
+
+.event-content address strong {
+  font-weight: 500;
+}
+
+footer {
+  padding: 61px 20px 0;
+  color: var(--purple);
+  font-family: "Roboto Mono", monospace;
+  font-size: clamp(20px, 2.3vw, 32px);
+  font-weight: 500;
+  line-height: 1.38;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .navbar nav {
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 8px;
+  }
+
+  .navbar nav a {
+    white-space: nowrap;
+  }
+
+  main {
+    padding: 0 20px 50px;
+  }
+
+  .hero img {
+    width: 100%;
+    height: 260px;
+    margin-left: 0;
+  }
+
+  .event-layout {
+    grid-template-columns: 1fr;
+    gap: 42px;
+    padding-left: 0;
+  }
+
+  .event h3 {
+    margin-bottom: 28px;
+  }
+
+  .event-media img {
+    height: min(68vw, 400px);
+  }
+
+  .event-content {
+    padding-right: 0;
+  }
+
+  .register {
+    min-width: 0;
+    width: min(100%, 361px);
+    margin-top: 24px;
+    font-size: 28px;
+  }
+
+  footer {
+    padding-top: 80px;
+  }
+}
